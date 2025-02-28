@@ -14,6 +14,8 @@ export class StructuralDirectivesComponent {
 
   name: string = "guest";
 
+  dark = "";
+
   login() {
     this.isLoggedIn = true;
   }
@@ -29,5 +31,14 @@ export class StructuralDirectivesComponent {
     , { id: 103, name: "Tilak", location: "Bangalore" }
     , { id: 104, name: "Vaghese", location: "Bangalore" }
   ]
+
+  changeBg() {
+    if(this.dark == "" || this.dark == "toTeal") {
+      this.dark = "toDark";
+    }
+    else {
+      this.dark = "toTeal";
+    }
+  }
 
 }

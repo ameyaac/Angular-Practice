@@ -1,6 +1,6 @@
 <h2>Structural Directives</h2>
 
-<div class="d-flex flex-row justify-content-evenly">
+<div class="d-flex flex-row justify-content-evenly flex-wrap">
   <div class="card m-2 p-3" style="width: 15vw;">
     @if(isLoggedIn) {
     <p class="m-2">Guest Login</p>
@@ -43,7 +43,7 @@
         }
     }
   </div>
-  <div class="card m-2 p-3 w-50 flex-fill">
+  <div class="card m-2 p-3 flex-fill" style="width: 20vw;">
     <table class="table table-striped">
         <thead>
             <tr>
@@ -65,8 +65,16 @@
     </table>
   </div>
   <div class="card m-2 p-3">
+    <h3>ngStyle</h3>
     <p [ngStyle]="{'color': 'blue', 'font-size': '14px'}">
         This is a sample sentence using ngStyle (CommonModule in ts component).
     </p>
+  </div>
+  <div class="card m-2 p-3" >
+    <h3>ngClass</h3>
+    <div [ngClass]="dark" class="rounded p-3">
+        <b>Sample Text</b>
+    </div>
+    <button class="btn btn-primary mt-2" (click)="changeBg()">Change Background</button>
   </div>
 </div>
