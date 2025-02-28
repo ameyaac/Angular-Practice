@@ -3,8 +3,7 @@
 </div>
 
 <div class="card p-3 m-5">
-  <div class="card-body">
-    <h2>Personal Details</h2>
+  <h2>Personal Details</h2>
     <form class="row g-3" (submit)="onSubmit()">
       <div class="col-md-6">
         <label for="inputFirstName" class="form-label">First Name</label>
@@ -112,13 +111,10 @@
         </button>
       </div>
     </form>
-  </div>
 </div>
 
 <div class="card m-5 p-3">
-  <div class="card-body">
-    <app-for-input></app-for-input>
-  </div>
+  <app-for-input></app-for-input>
 </div>
 
 <!-- when reading code please switch the "for-input" and "child-comm" components -->
@@ -140,13 +136,13 @@
 </div>
 
 <div class="card m-5 p-3">
-  <div class="card-body">
-    <app-structural-directives></app-structural-directives>
-  </div>
+  <app-structural-directives></app-structural-directives>
 </div>
 
 <div class="card m-5 p-3">
-  <div class="card-body">
-    <app-dynamic-component></app-dynamic-component>
-  </div>
+  <app-pipes></app-pipes>
+</div>
+
+<div class="card m-5 p-3">
+  <app-dynamic-component></app-dynamic-component>
 </div>

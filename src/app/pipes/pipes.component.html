@@ -1,0 +1,60 @@
+<h2>Pipes</h2>
+
+<hr />
+
+<h3>Built-in Pipes</h3>
+
+<div class="d-flex flex-row flex-wrap justify-content-evenly">
+  <div class="card m-2 p-3">
+    <h4>DatePipe</h4>
+    <p><b>Today's Date: </b></p>
+    <p>{{ presentDate | date : "fullDate" }}</p>
+  </div>
+  <div class="card m-2 p-3">
+    <h4>Case Pipes</h4>
+    <p><b>UPPERCASE: </b></p>
+    <p>{{ presentDate.toString() | uppercase }}</p>
+    <p><b>lowercase: </b></p>
+    <p>{{ presentDate.toString() | lowercase }}</p>
+  </div>
+  <div class="card m-2 p-3">
+    <h4>SlicePipe</h4>
+    <div class="card-body">
+      <p><b>Day: </b>{{ presentDate.toString() | slice : 0 : 3 }}</p>
+      <p><b>Date: </b>{{ presentDate.toString() | slice : 4 : 15 }}</p>
+      <p><b>Time: </b>{{ presentDate.toString() | slice : 16 : 24 }}</p>
+      <p><b>Time Zone: </b>{{ presentDate.toString() | slice : 25 : 33 }}</p>
+      <p><b>Time Zone Name: </b>{{ presentDate.toString() | slice : 34 }}</p>
+    </div>
+  </div>
+  <div class="card m-2 p-3">
+    <h4>CurrencyPipe</h4>
+    <p><b>Default: </b>{{value | currency}}</p>
+    <h5>Custom Format with INR</h5>
+    <p><b>Symbol: </b>{{value | currency: 'INR' : 'symbol'}}</p>
+    <p><b>Code: </b>{{value | currency: 'INR' : 'code'}}</p>
+    <p><b>Narrow Symbol: </b>{{value | currency: 'INR' : 'symbol-narrow'}}</p>
+  </div>
+  <div class="card m-2 p-3">
+    <h4>Number Pipe</h4>
+    <p><b>Number: </b>{{value | number: '2.4-7'}}</p>
+    <p><b>Percent: </b>{{(value/100000) | percent: '2.4-7'}}</p>
+  </div>
+</div>
+
+<h3>Custom Pipes</h3>
+
+<div class="d-flex flex-row flex-wrap justify-content-start">
+    <div class="card m-2 p-3">
+        <p>Enter Number:</p>
+        <input class="form-control" [(ngModel)]="temperature">
+    </div>
+    <div class="card m-2 p-3">
+        <p><b>F to C:</b></p>
+        <p>{{temperature | temperatureConverter}}</p>
+    </div>
+    <div class="card m-2 p-3">
+        <p><b>C to F:</b></p>
+        <p>{{temperature | temperatureConverter: 'f'}}</p>
+    </div>
+</div>
