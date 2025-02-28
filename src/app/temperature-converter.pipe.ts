@@ -16,10 +16,16 @@ export class TemperatureConverterPipe implements PipeTransform {
     switch (formatType) {
       case 'c':
       case 'C':
-        return ((value - 32) * (5 / 9) + 'C');
+        return new Intl.NumberFormat('en-US', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }).format(value) + "C";
       case 'f':
       case 'F':
-        return (value * (9 / 5) + 32) + 'C';
+        return new Intl.NumberFormat('en-US', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        }).format(value) + "F";
     }
   }
 }

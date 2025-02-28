@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { TemperatureConverterPipe } from '../temperature-converter.pipe';
 import { FormsModule } from '@angular/forms';
+import { TemperatureConverterPipe } from '../temperature-converter.pipe';
+import { TimeConverterPipe } from '../time-converter.pipe';
 import {
   DatePipe,
   LowerCasePipe,
@@ -23,7 +24,8 @@ import {
     PercentPipe,
     DecimalPipe,
     TemperatureConverterPipe,
-    FormsModule
+    FormsModule,
+    TimeConverterPipe
   ],
   templateUrl: './pipes.component.html',
   styleUrl: './pipes.component.scss',
@@ -33,5 +35,7 @@ export class PipesComponent {
 
   value: number = 230970100;
 
-  temperature: number = 32;
+  temperature: number = -40;
+
+  days: number = 0;
 }

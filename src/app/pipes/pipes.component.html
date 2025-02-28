@@ -49,12 +49,17 @@
         <p>Enter Number:</p>
         <input class="form-control" [(ngModel)]="temperature">
     </div>
-    <div class="card m-2 p-3">
+    <div class="card m-2 p-3" style="width: 5vw;">
         <p><b>F to C:</b></p>
         <p>{{temperature | temperatureConverter}}</p>
     </div>
-    <div class="card m-2 p-3">
+    <div class="card m-2 p-3" style="width: 5vw;">
         <p><b>C to F:</b></p>
         <p>{{temperature | temperatureConverter: 'f'}}</p>
+    </div>
+    <div class="card m-2 p-3">
+        <label>Enter Days:</label>
+        <input type="text" class="form-control" #days><button class="btn btn-link" (click)="days">Convert</button>
+        <p><b>Seconds: </b>{{days.value | timeConverter}}</p>
     </div>
 </div>
