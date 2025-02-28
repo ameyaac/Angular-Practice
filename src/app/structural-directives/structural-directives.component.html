@@ -1,0 +1,72 @@
+<h2>Structural Directives</h2>
+
+<div class="d-flex flex-row justify-content-evenly">
+  <div class="card m-2 p-3" style="width: 15vw;">
+    @if(isLoggedIn) {
+    <p class="m-2">Guest Login</p>
+    } @else {
+    <p class="m-2">Guest logged out</p>
+    }
+
+    <div class="btn-group-vertical m-3">
+      <button class="btn btn-success" (click)="login()">login</button>
+      <button class="btn btn-danger" (click)="logout()">logout</button>
+    </div>
+  </div>
+
+  <div class="card m-2 p-3">
+    <p>Enter your name (and press any key): <input type="text" #textName (keypress)="0" class="form-control"></p>
+    @switch (textName.value) {
+        @case ("admin") {
+            <p>Hello <i>admin</i></p>
+        }
+        @case ("guest") {
+            <p>Hello <i>guest user</i></p>
+        }
+        @case ("Ameyaa") {
+            <p>Hello <i>Ameyaa</i></p>
+        }
+        @case ("Hari") {
+            <p>Hello <i>Hari</i></p>
+        }
+        @case ("Gokul") {
+            <p>Hello <i>Gokul</i></p>
+        }
+        @case ("Tilak") {
+            <p>Hello <i>Tilak</i></p>
+        }
+        @case ("Vaghese") {
+            <p>Hello <i>Vaghese</i></p>
+        }
+        @default {
+            <p>Sorry. No such user exists :'(</p>
+        }
+    }
+  </div>
+  <div class="card m-2 p-3 w-50 flex-fill">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>LOCATION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- track is to keep track of iterations -->
+            @for (employee of employees; track employee.id) { 
+                <tr>
+                    <td>{{employee.id}}</td>
+                    <td>{{employee.name}}</td>
+                    <td>{{employee.location}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+  </div>
+  <div class="card m-2 p-3">
+    <p [ngStyle]="{'color': 'blue', 'font-size': '14px'}">
+        This is a sample sentence using ngStyle (CommonModule in ts component).
+    </p>
+  </div>
+</div>

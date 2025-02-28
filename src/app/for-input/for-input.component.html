@@ -1,0 +1,4 @@
+<h2>HTML Binding to Component</h2>
+
+<label for="text-box" id="text-from-box" class="mb-2">Text: <span class="text-secondary">{{ message }}</span></label>
+<input type="text" id="text-box" class="form-control" #textBox (input)="handleClick($event)" />
