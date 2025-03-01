@@ -4,7 +4,7 @@
 
 <h3>Built-in Pipes</h3>
 
-<div class="d-flex flex-row flex-wrap justify-content-evenly">
+<div class="d-flex flex-row">
   <div class="card m-2 p-3">
     <h4>DatePipe</h4>
     <p><b>Today's Date: </b></p>
@@ -44,7 +44,7 @@
 
 <h3>Custom Pipes</h3>
 
-<div class="d-flex flex-row flex-wrap justify-content-start">
+<div class="d-flex flex-row">
     <div class="card m-2 p-3">
         <p>Enter Number:</p>
         <input class="form-control" [(ngModel)]="temperature">
@@ -57,6 +57,7 @@
         <p><b>C to F:</b></p>
         <p>{{temperature | temperatureConverter: 'f'}}</p>
     </div>
+    <div class="card m-2"></div>
     <div class="card m-2 p-3">
         <label>Enter Days:</label>
         <input type="text" class="form-control" #days><button class="btn btn-link" (click)="days">Convert</button>

@@ -29,7 +29,7 @@ export class StructuralDirectivesComponent {
     , { id: 101, name: "Hari", location: "Bangalore" }
     , { id: 102, name: "Gokul", location: "Bangalore" }
     , { id: 103, name: "Tilak", location: "Bangalore" }
-    , { id: 104, name: "Vaghese", location: "Bangalore" }
+    , { id: 104, name: "Vageesh", location: "Bangalore" }
   ]
 
   changeBg() {

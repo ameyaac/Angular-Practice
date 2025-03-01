@@ -1,1 +1,15 @@
 <h2>Dynamic Components</h2>
+
+<hr>
+
+<div class="m-2 p-3 d-flex flex-row justify-content-start">
+    <div class="card m-2 p-3 w-5" style="width: 20vw;">
+        <h3>ngComponentOutlet</h3>
+        <div class="btn-group">
+            <button class="btn btn-primary" (click)="adminLogin()">Admin</button>
+            <button class="btn btn-secondary" (click)="userLogin()">User</button>
+        </div>
+        <!-- Conditional Rendering -->
+        <app-check-bio [user]="user"></app-check-bio>
+    </div>
+</div>
