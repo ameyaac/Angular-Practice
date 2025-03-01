@@ -1,0 +1,7 @@
+<h2>Services</h2>
+<input type="text" class="form-control" [(ngModel)]="newItem" placeholder="New Item" id="input">
+<div class="btn-group m-2">
+    <button class="btn btn-success" (click)="pushItem()"><i class="bi bi-plus-lg"></i></button>
+    <button class="btn btn-danger" (click)="popItem()"><i class="bi bi-dash-lg"></i></button>
+</div>
+<span *ngFor="let item of items; let i = index">{{ newItem }} </span>

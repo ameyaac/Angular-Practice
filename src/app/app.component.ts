@@ -6,11 +6,12 @@ import { ForOutputComponent } from "./for-output/for-output.component";
 import { DynamicComponentComponent } from "./dynamic-component/dynamic-component.component";
 import { StructuralDirectivesComponent } from "./structural-directives/structural-directives.component";
 import { PipesComponent } from "./pipes/pipes.component";
+import { ServicesComponent } from "./services/services.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ForInputComponent, FormsModule, ChildCommComponent, ForOutputComponent, DynamicComponentComponent, StructuralDirectivesComponent, PipesComponent],
+  imports: [ForInputComponent, FormsModule, ChildCommComponent, ForOutputComponent, DynamicComponentComponent, StructuralDirectivesComponent, PipesComponent, ServicesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
