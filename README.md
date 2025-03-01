@@ -2,7 +2,7 @@
 This file contains examples of each of the following features of AngularJS.
 - Comunication between child and parent.
 - Structural Directives
-- Pipes: custom
+- Pipes: built-in and custom
 - `@Input()` and `@Output()`
 
 ## **Note:**
